@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_u.c                                          :+:      :+:    :+:   */
+/*   ft_comb_minus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suahn <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/01 14:09:01 by suahn             #+#    #+#             */
-/*   Updated: 2020/07/06 16:18:06 by suahn            ###   ########.fr       */
+/*   Created: 2020/07/01 14:17:08 by suahn             #+#    #+#             */
+/*   Updated: 2020/07/06 17:45:57 by suahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	print_u(va_list *list, t_struct *count, t_struct *flag)
+void	ft_comb_minus_p(t_struct *flag, t_struct *pointer)
 {
-	t_struct uint;
-
-	uint.unbr = va_arg(*list, unsigned int);
-	uint.un = uint.unbr;
-	uint.len = 0;
-	ft_treat_digit(flag, &uint, 10);
 	if (flag->minus == 1)
-		ft_comb_minus_yes_u(count, flag, &uint);
-	if (flag->minus == 0)
-		ft_comb_minus_no_u(count, flag, &uint);
+	{
+		ft_putstr("0x");
+		if (!(pointer->ln == 0 && flag->prec >= 0))
+			ft_putnbr_base(pointer->ln, "0123456789abcdef");
+		while (flag->width-- > pointer->len)
+			ft_putchar(' ');
+	}
+	else if (flag->minus == 0)
+	{
+		while (flag->width-- > pointer->len)
+			ft_putchar(' ');
+		ft_putstr("0x");
+		if (!(pointer->ln == 0 && flag->prec >= 0))
+			ft_putnbr_base(pointer->ln, "0123456789abcdef");
+	}
 }

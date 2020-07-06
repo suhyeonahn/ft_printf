@@ -6,7 +6,7 @@
 /*   By: suahn <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 14:08:38 by suahn             #+#    #+#             */
-/*   Updated: 2020/07/01 15:26:31 by suahn            ###   ########.fr       */
+/*   Updated: 2020/07/06 12:55:44 by suahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	print_s(va_list *list, t_struct *count, t_struct *flag)
 
 	string.str = va_arg(*list, char *);
 	if (!string.str)
-		string.str = "(null)";
+		string.str = "(null)\0";
 	if ((-1 < flag->prec) && ((size_t)flag->prec < ft_strlen(string.str)))
 	{
 		flag->width = flag->width - flag->prec;
