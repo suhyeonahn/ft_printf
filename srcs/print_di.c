@@ -6,7 +6,7 @@
 /*   By: suahn <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 14:08:08 by suahn             #+#    #+#             */
-/*   Updated: 2020/07/06 17:27:47 by suahn            ###   ########.fr       */
+/*   Updated: 2020/07/07 09:17:29 by suahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	print_di(va_list *list, t_struct *count, t_struct *flag)
 {
 	t_struct integer;
 
+	integer.prec = flag->prec;
 	integer.nbr = va_arg(*list, int);
 	flag->neg = (integer.nbr >= 0) ? 0 : 1;
 	if (integer.nbr != -2147483648)

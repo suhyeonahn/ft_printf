@@ -6,7 +6,7 @@
 /*   By: suahn <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 14:09:11 by suahn             #+#    #+#             */
-/*   Updated: 2020/07/06 16:17:49 by suahn            ###   ########.fr       */
+/*   Updated: 2020/07/07 09:18:31 by suahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	print_x(va_list *list, t_struct *count, t_struct *flag)
 {
 	t_struct hexa;
 
+	hexa.prec = flag->prec;
 	hexa.unbr = va_arg(*list, unsigned int);
 	hexa.un = hexa.unbr;
 	hexa.len = 0;

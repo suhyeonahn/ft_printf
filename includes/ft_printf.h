@@ -6,7 +6,7 @@
 /*   By: suahn <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 14:48:46 by suahn             #+#    #+#             */
-/*   Updated: 2020/07/06 16:16:42 by suahn            ###   ########.fr       */
+/*   Updated: 2020/07/07 10:42:58 by suahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ void					ft_comb_zero_no2_x(t_struct *count, t_struct *flag,
 		t_struct *digit);
 void					ft_comb_zero_no2_xx(t_struct *count, t_struct *flag,
 		t_struct *digit);
+void					ft_comb_zero_print_int(t_struct *digit);
 void					ft_printf2(t_struct *count);
 void					print_c(va_list *list, t_struct *count, t_struct *flag);
 void					print_s(va_list *list, t_struct *count, t_struct *flag);
