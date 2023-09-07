@@ -1,2 +1,2 @@
 # ft_printf
-42project
+Recoding printf function.
